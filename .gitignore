@@ -1,0 +1,8 @@
+build/
+cmake-build-*/
+.vs/
+.vscode/
+*.user
+*.suo
+.DS_Store
+Thumbs.db

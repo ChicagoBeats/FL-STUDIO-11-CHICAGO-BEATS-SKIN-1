@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chicago Beats Bloodline — Visualizer Companion</title>
+<link rel="stylesheet" href="src/visualizer/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="crown">♛</span><div><b>CHICAGO BEATS</b><small>BLOODLINE • FL STUDIO 11 COMPANION</small></div></div>
+  <div class="status"><span id="audioState" class="dot"></span><span id="audioLabel">DEMO SIGNAL</span><span class="sep">|</span><span id="fps">60 FPS TARGET</span></div>
+</header>
+<main>
+  <section class="toolbar">
+    <div class="title">BLOODLINE CONTROL DECK</div>
+    <div class="controls">
+      <button id="audioBtn">CONNECT AUDIO INPUT</button>
+      <button id="demoBtn" class="active">DEMO MODE: ON</button>
+      <button id="carBtn" class="active">CAR ANIMATION: ON</button>
+      <label class="gain">VISUAL INTENSITY <input id="intensity" type="range" min="20" max="150" value="100"></label>
+    </div>
+    <p class="hint">For FL Studio playback analysis, select a Windows loopback input such as Stereo Mix or a virtual audio cable when prompted.</p>
+  </section>
+
+  <section class="hero panel">
+    <div class="section-label">01 / BATMOBILE TOOLBAR RUNWAY <span>28-INCH RIM CONCEPT</span></div>
+    <canvas id="carCanvas" width="1440" height="300"></canvas>
+    <div class="car-controls">
+      <button data-mode="cruise" class="mode active">BACK & FORTH</button>
+      <button data-mode="burnout" class="mode">BURNOUT</button>
+      <button data-mode="donut" class="mode">DONUTS</button>
+      <button data-mode="idle" class="mode">HOLD POSITION</button>
+      <span id="carModeLabel">MODE: BACK & FORTH</span>
+    </div>
+    <p class="hint">The supplied car image is retained in assets as the shape/identity reference. This first prototype uses a vector placeholder for motion; the next art pass should create a transparent, angle-matched car sprite before claiming an exact visual match.</p>
+  </section>
+
+  <section class="grid">
+    <section class="panel playlist">
+      <div class="section-label">02 / PLAYLIST PIANO VISUALIZER <span>MIDI FALL • KEY IMPACT • MATRIX RAIN</span></div>
+      <canvas id="pianoCanvas" width="1000" height="410"></canvas>
+      <div class="hint">Prototype visualization layer only. It does not draw inside FL Studio 11's native Playlist.</div>
+    </section>
+    <section class="panel speakers">
+      <div class="section-label">03 / SPEAKER + SPECTRUM ENGINE <span>LOW / MID / HIGH ANALYSIS</span></div>
+      <canvas id="speakerCanvas" width="640" height="410"></canvas>
+      <div class="hint">Speaker cone excursion and EQ response are driven by the connected audio spectrum or demo signal.</div>
+    </section>
+  </section>
+
+  <section class="panel footer-panel">
+    <div class="section-label">04 / SYSTEM NOTES</div>
+    <div class="notes">
+      <div><b>LIVE INPUT</b><p>Connect a loopback-capable Windows recording device to analyze FL Studio output.</p></div>
+      <div><b>FREQUENCY BANDS</b><p>Sub 20–120 Hz • Mid 120 Hz–4 kHz • High 4–16 kHz.</p></div>
+      <div><b>INTEGRATION PATH</b><p>Companion prototype first; native VST2/host integration and Playlist embedding require separate FL11-compatible engineering.</p></div>
+    </div>
+  </section>
+</main>
+<script src="src/visualizer/app.js"></script>
+</body>
+</html>
