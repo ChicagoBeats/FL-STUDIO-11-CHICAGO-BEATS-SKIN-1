@@ -1,0 +1,28 @@
+' !!! WARNING : SKINNING IS NOT SUPPORTED ANYMORE !!!
+
+' version
+Version=5
+
+' Starting bottom hint (should be the title or the skin)
+Hint=CHICAGO BEATS BLOODLINE
+
+' MenuItems.BMP separations
+MenuSep=29,60,122,157,210,252
+
+' title bar font (name, color, height)
+TitleFont=Arial,$00d8d8e8,-11
+' hint font
+HintFont=Arial,$00d8d8e8,-11
+' sample browser tree font
+SBTreeFont=Arial,$00d8d8e8,-11
+
+' scope color
+ScopeCol=$00ff45d8
+' sample settings scope colors
+SampleScopeCol=$00ff45d8,$00aaecff,$00aaecff
+
+' chan pan/vol, mute, set, select, grid, piano roll relative positions (set of X,Y points)
+ChanBtns=17,5, 5,9, 56,0, 134,0,151,0,8,14
+
+' piano roll kb labels
+PRKbLabels=2
